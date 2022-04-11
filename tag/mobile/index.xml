@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mobile | Matthew Porter</title>
+    <link>https://shanesreal.github.io/tag/mobile/</link>
+      <atom:link href="https://shanesreal.github.io/tag/mobile/index.xml" rel="self" type="application/rss+xml" />
+    <description>Mobile</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2022 Matthew Porter</copyright><lastBuildDate>Fri, 03 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://shanesreal.github.io/media/icon_hu8fdb34033c3c4c7baacfa74088969afb_426337_512x512_fill_lanczos_center_3.png</url>
+      <title>Mobile</title>
+      <link>https://shanesreal.github.io/tag/mobile/</link>
+    </image>
+    
+    <item>
+      <title>Memorize</title>
+      <link>https://shanesreal.github.io/project/mobile/</link>
+      <pubDate>Fri, 03 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>https://shanesreal.github.io/project/mobile/</guid>
+      <description>&lt;p&gt;Developed a mobile application that allows you to play a fun card-matching game designed for iOS devices. You can win the game by selecting two identical cards, once all matching cards have been found and flipped over the game can be reset and played again.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Publication_types | Matthew Porter</title>
+    <link>https://shanesreal.github.io/publication_types/</link>
+      <atom:link href="https://shanesreal.github.io/publication_types/index.xml" rel="self" type="application/rss+xml" />
+    <description>Publication_types</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2022 Matthew Porter</copyright><lastBuildDate>Sat, 30 Nov 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://shanesreal.github.io/media/icon_hu8fdb34033c3c4c7baacfa74088969afb_426337_512x512_fill_lanczos_center_3.png</url>
+      <title>Publication_types</title>
+      <link>https://shanesreal.github.io/publication_types/</link>
+    </image>
+    
+  </channel>
+</rss>

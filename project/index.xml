@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects | Matthew Porter</title>
+    <link>https://shanesreal.github.io/project/</link>
+      <atom:link href="https://shanesreal.github.io/project/index.xml" rel="self" type="application/rss+xml" />
+    <description>Projects</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2022 Matthew Porter</copyright><lastBuildDate>Thu, 09 Sep 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://shanesreal.github.io/media/icon_hu8fdb34033c3c4c7baacfa74088969afb_426337_512x512_fill_lanczos_center_3.png</url>
+      <title>Projects</title>
+      <link>https://shanesreal.github.io/project/</link>
+    </image>
+    
+    <item>
+      <title>stock-app</title>
+      <link>https://shanesreal.github.io/project/web/</link>
+      <pubDate>Thu, 09 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>https://shanesreal.github.io/project/web/</guid>
+      <description>&lt;p&gt;Developed a web application that tracks products from leading retailers using a REST API which notifies users when a product is available. GitHub Secrets and GitHub Actions are used to automate CI/CD workflows for docker running on AWS Elastic Beanstalk.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Memorize</title>
+      <link>https://shanesreal.github.io/project/mobile/</link>
+      <pubDate>Fri, 03 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>https://shanesreal.github.io/project/mobile/</guid>
+      <description>&lt;p&gt;Developed a mobile application that allows you to play a fun card-matching game designed for iOS devices. You can win the game by selecting two identical cards, once all matching cards have been found and flipped over the game can be reset and played again.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>vpn-application</title>
+      <link>https://shanesreal.github.io/project/desktop/</link>
+      <pubDate>Sat, 30 Nov 2019 00:00:00 +0000</pubDate>
+      <guid>https://shanesreal.github.io/project/desktop/</guid>
+      <description>&lt;p&gt;Developed a desktop application that allows you to connect to a remote server with the help of OpenVPN via UDP or TCP network protocols. Included a 32-minute video demonstrating how to code the application and configure network protocols.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
