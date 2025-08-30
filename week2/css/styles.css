@@ -1,0 +1,146 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+.main-title {
+    text-align: center;
+    margin: 40px 0 30px 0;
+    font-size: 175%;
+}
+
+.mobile-title {
+    display: none;
+}
+
+.row {
+    width: 100%;
+}
+
+.section {
+    position: relative;
+    background-color: #999999;
+    border: 1px solid black;
+    margin: 15px;
+    height: 200px;
+    overflow: hidden;
+}
+
+.section-title {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: 1px solid black;
+    border-top: none;
+    border-right: none;
+    padding: 5px 35px;
+    font-size: 125%;
+    font-weight: bold;
+}
+
+#title-one {
+    background-color: #D59898;
+}
+
+#title-two {
+    background-color: #C14543;
+    color: white;
+}
+
+#title-three {
+    background-color: #E5D198;
+}
+
+.content {
+    padding: 40px 10px 10px 10px;
+    height: 100%;
+    overflow: hidden;
+}
+
+.content p {
+    margin-top: 18px;
+}
+
+.mobile-title-text {
+    display: none;
+}
+
+.section:hover {
+    cursor: ns-resize;
+}
+
+.section:hover .content {
+    overflow-y: auto;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media (min-width: 992px) {
+    .col-lg-4 {
+        float: left;
+        width: 33.33%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .col-md-6 {
+        float: left;
+        width: 50%;
+    }
+    .col-md-12 {
+        float: left;
+        width: 100%;
+    }
+}
+
+@media (max-width: 767px) {
+    .col-sm-12 {
+        float: left;
+        width: 100%;
+    }
+    
+    .main-title {
+        display: none;
+    }
+    
+    .mobile-title {
+        display: block;
+        text-align: left;
+        margin: 30px 0 20px 15px;
+        font-size: 150%;
+        font-family: Georgia, serif;
+    }
+    
+    .section-title {
+        left: 0;
+        right: 0;
+        width: 100%;
+        text-align: center;
+        border-left: none;
+        border-right: none;
+    }
+    
+    .mobile-title-text {
+        display: inline;
+    }
+    
+    .desktop-tablet-title {
+        display: none;
+    }
+    
+    .content {
+        padding-top: 45px;
+    }
+    
+    .content p {
+        margin-top: 10px;
+    }
+}
