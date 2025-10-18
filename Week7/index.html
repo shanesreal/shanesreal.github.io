@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" ng-app="ShoppingListCheckOff">
   <head>
     <title>Shopping List Check Off</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,6 +20,11 @@
       button > span {
         color: green;
       }
+      .quantity-input {
+        width: 60px;
+        display: inline-block;
+        margin-left: 10px;
+      }
     </style>
   </head>
 <body>
@@ -28,26 +33,37 @@
 
   <div class="row">
 
-    <!-- To Buy List -->
-    <div class="col-md-6">
+    <div class="col-md-6" ng-controller="ToBuyController as toBuy">
      <h2>To Buy:</h2>
      <ul>
-       <li>Buy 10 cookies <button class="btn btn-default"><span class="glyphicon glyphicon-ok"></span> Bought</button></li>
-       <li>Buy 10 cookies <button class="btn btn-default"><span class="glyphicon glyphicon-ok"></span> Bought</button></li>
+       <li ng-repeat="item in toBuy.items">
+         Buy {{ item.quantity }} {{ item.name }}
+         <input type="number" 
+                ng-model="item.quantity" 
+                class="quantity-input form-control"
+                min="1">
+         <button class="btn btn-default" 
+                 ng-click="toBuy.buyItem($index)">
+           <span class="glyphicon glyphicon-ok"></span> Bought
+         </button>
+       </li>
      </ul>
-     <div class="emptyMessage">Everything is bought!</div>
+     <div class="emptyMessage" ng-if="toBuy.items.length === 0">Everything is bought!</div>
     </div>
 
-    <!-- Already Bought List -->
-    <div class="col-md-6">
+    <div class="col-md-6" ng-controller="AlreadyBoughtController as bought">
      <h2>Already Bought:</h2>
      <ul>
-       <li>Bought 10 cookies</li>
+       <li ng-repeat="item in bought.items">
+         Bought {{ item.quantity }} of {{ item.name }} for total price of {{ item.quantity * item.pricePerItem | angularDollar }}
+       </li>
      </ul>
-     <div class="emptyMessage">Nothing bought yet.</div>
+     <div class="emptyMessage" ng-if="bought.items.length === 0">Nothing bought yet.</div>
     </div>
   </div>
 </div>
 
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+<script src="app.js"></script>
 </body>
 </html>
