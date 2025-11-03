@@ -1,0 +1,21 @@
+<div ng-if="list.searched && list.isEmpty()" class="alert alert-warning">
+  Nothing found
+</div>
+
+<ul class="list-group" ng-if="!list.isEmpty()">
+  <li class="list-group-item" ng-repeat="item in list.items">
+    <div class="row">
+      <div class="col-md-10">
+        <strong>{{ item.name }}</strong> ({{ item.short_name }})
+        <br>
+        <em>{{ item.description }}</em>
+      </div>
+      <div class="col-md-2">
+        <button class="btn btn-danger btn-sm" 
+                ng-click="list.onRemove({index: $index})">
+          Don't want this one!
+        </button>
+      </div>
+    </div>
+  </li>
+</ul>
