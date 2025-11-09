@@ -1,0 +1,41 @@
+<div class="container">
+  <h2 class="text-center">My Info</h2>
+  
+  <div ng-if="!myinfoCtrl.isSignedUp" class="text-center" style="margin-top: 50px;">
+    <h3>Not Signed Up Yet. <a ui-sref="public.signup">Sign up Now!</a></h3>
+  </div>
+
+  <div ng-if="myinfoCtrl.isSignedUp">
+    <div class="row">
+      <div class="col-md-6">
+        <h3>User Information</h3>
+        <div class="panel panel-default">
+          <div class="panel-body" style="color: #000;">
+            <p style="color: #000;"><strong>Name:</strong> {{myinfoCtrl.user.firstName}} {{myinfoCtrl.user.lastName}}</p>
+            <p style="color: #000;"><strong>Email:</strong> {{myinfoCtrl.user.email}}</p>
+            <p style="color: #000;"><strong>Phone:</strong> {{myinfoCtrl.user.phone}}</p>
+            <p style="color: #000;"><strong>Favorite Menu Number:</strong> {{myinfoCtrl.user.favoriteDish}}</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6" ng-if="myinfoCtrl.user.favoriteMenuItem">
+        <h3>Favorite Menu Item</h3>
+        <div class="panel panel-default">
+          <div class="panel-body" style="color: #000;">
+            <div class="menu-item-photo">
+              <div>{{myinfoCtrl.user.favoriteMenuItem.short_name}}</div>
+              <img class="img-responsive" 
+                   width="250" 
+                   height="150"
+                   ng-src="images/menu/{{myinfoCtrl.user.favoriteDish.charAt(0)}}/{{myinfoCtrl.user.favoriteMenuItem.short_name}}.jpg" 
+                   alt="{{myinfoCtrl.user.favoriteMenuItem.name}}">
+            </div>
+            <h4 style="color: #000;">{{myinfoCtrl.user.favoriteMenuItem.name}}</h4>
+            <p style="color: #000;">{{myinfoCtrl.user.favoriteMenuItem.description}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

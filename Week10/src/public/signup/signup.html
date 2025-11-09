@@ -1,0 +1,89 @@
+<div class="container">
+  <h2 class="text-center">Sign Up for Our Newsletter</h2>
+  
+  <div class="alert alert-success" ng-if="signupCtrl.completed">
+    <strong>Your information has been saved.</strong>
+  </div>
+
+  <form name="signupForm" novalidate ng-submit="signupCtrl.submit()" ng-if="!signupCtrl.completed">
+    
+    <div class="form-group">
+      <label for="firstName">First Name *</label>
+      <input type="text" 
+             class="form-control" 
+             id="firstName" 
+             name="firstName"
+             ng-model="signupCtrl.user.firstName" 
+             required>
+      <span class="text-danger" ng-if="signupForm.firstName.$invalid && signupForm.firstName.$touched">
+        First name is required.
+      </span>
+    </div>
+
+    <div class="form-group">
+      <label for="lastName">Last Name *</label>
+      <input type="text" 
+             class="form-control" 
+             id="lastName" 
+             name="lastName"
+             ng-model="signupCtrl.user.lastName" 
+             required>
+      <span class="text-danger" ng-if="signupForm.lastName.$invalid && signupForm.lastName.$touched">
+        Last name is required.
+      </span>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email Address *</label>
+      <input type="email" 
+             class="form-control" 
+             id="email" 
+             name="email"
+             ng-model="signupCtrl.user.email" 
+             required>
+      <span class="text-danger" ng-if="signupForm.email.$invalid && signupForm.email.$touched">
+        <span ng-if="signupForm.email.$error.required">Email is required.</span>
+        <span ng-if="signupForm.email.$error.email">Please enter a valid email address.</span>
+      </span>
+    </div>
+
+    <div class="form-group">
+      <label for="phone">Phone Number *</label>
+      <input type="tel" 
+             class="form-control" 
+             id="phone" 
+             name="phone"
+             ng-model="signupCtrl.user.phone" 
+             required
+             ng-pattern="/^[\d\s\-\(\)]+$/">
+      <span class="text-danger" ng-if="signupForm.phone.$invalid && signupForm.phone.$touched">
+        <span ng-if="signupForm.phone.$error.required">Phone number is required.</span>
+        <span ng-if="signupForm.phone.$error.pattern">Please enter a valid phone number.</span>
+      </span>
+    </div>
+
+    <div class="form-group">
+      <label for="favoriteDish">Favorite Menu Number *</label>
+      <input type="text" 
+             class="form-control" 
+             id="favoriteDish" 
+             name="favoriteDish"
+             placeholder="e.g., L1, A5, B12"
+             ng-model="signupCtrl.user.favoriteDish" 
+             required
+             ng-blur="signupCtrl.validateFavorite()">
+      <span class="text-danger" ng-if="signupForm.favoriteDish.$invalid && signupForm.favoriteDish.$touched">
+        Favorite menu number is required.
+      </span>
+      <span class="text-danger" ng-if="signupCtrl.invalidMenuItem">
+        No such menu number exists.
+      </span>
+    </div>
+
+    <button type="submit" 
+            class="btn btn-primary" 
+            ng-disabled="signupForm.$invalid">
+      Submit
+    </button>
+  </form>
+</div>
